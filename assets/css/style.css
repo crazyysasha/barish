@@ -1,0 +1,92 @@
+.positioned {
+    background-color: aquamarine;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 0;
+    background-color: blueviolet;
+    /* width: ; */
+    height: 200px;
+    z-index: 3;
+}
+
+.header  {
+    width: 100%;
+    background-color: brown;
+    position: sticky;
+    top:0;
+}
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-toggler {
+    cursor: pointer;
+    padding: 12px 20px;
+    border: 1px solid rgb(85, 4, 161);
+    color: rgb(85, 4, 161);
+    border-radius: 12px;
+    transition: all 1s ease;
+    /* transition-property: color; */
+    transition-duration: 2s;
+    transition-delay: 10s;
+    /* transition-timing-function: ; */
+}
+
+.modal-toggler:hover {
+    background-color: rgb(85, 4, 161);
+    color: white;
+}
+
+.modal-toggler:focus + .modal-container {
+    display: flex;
+}
+
+.modal {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.track {
+    margin-top: 200px;
+}
+
+.track > div {
+    width: 200px;
+    height: 120px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 1s cubic-bezier(0,1.83,1,-0.65);
+    /* opacity: 0; */
+    transform: translateX(-600px);
+}
+
+.track:hover > div {
+    opacity: 1;
+    transform: translateX(600px);
+}
